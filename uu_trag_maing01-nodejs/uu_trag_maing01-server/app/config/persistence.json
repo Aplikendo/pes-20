@@ -1,0 +1,41 @@
+{
+  "maxNoa": 100,
+  "uuSubAppDataStore": {
+    "primary": {
+      "type": "uuAppObjectStore",
+      "realization": "MongoDB",
+      "schemaMap": {
+        "tragInstance": {
+          "realization": "dao/TragInstanceMongo",
+          "maxNoi": 1
+        },
+        "trip": {
+          "realization": "dao/TripMongo",
+          "maxNoi": 1000
+        },
+        "tripRating": {
+          "realization": "dao/TripRatingMongo",
+          "maxNoi": 10000
+        },
+        "participant": {
+          "realization": "dao/ParticipantMongo",
+          "maxNoi": 128
+        },
+        "location": {
+          "realization": "dao/LocationMongo",
+          "maxNoi": 128
+        }
+      }
+    },
+    "binary": {
+      "type": "uuAppBinaryStore",
+      "realization": "MongoDB",
+      "schemaMap": {
+        "uuBinary": {
+          "realization": "uu_appg01_binarystore-cmd:dao/UuAppBinarystoreMongo",
+          "maxSob": 5242880
+        }
+      }
+    }
+  }
+}
